@@ -232,4 +232,4 @@ def solve(x, y, z, alpha, beta, gamma):
         
     return arm_angle
 
-print(solve(0, 0, 300, 0, 0, 0)*180/pi)
+print(solve(0, 0, 300, 0, 0, 0))

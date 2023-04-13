@@ -4,10 +4,11 @@
 
 Данный проект создан для изучения возможностей [тренажёра](https://auto-sys.su/products/astm/) (зелёный), спроектированного на базе 6-ти степенной платформы Стюрта на угловых актуаторах.
 
-а). ![2  AST-05](https://user-images.githubusercontent.com/86445241/231886084-fe86d7e1-3b1b-4f3b-98cd-186a6a726291.png)|б). ![1  Graph, default position of platform](https://user-images.githubusercontent.com/86445241/231886267-50940a10-0ec4-424c-b39e-7f0f63999aef.png)
+![2  AST-05](https://user-images.githubusercontent.com/86445241/231886084-fe86d7e1-3b1b-4f3b-98cd-186a6a726291.png)|![1  Graph, default position of platform](https://user-images.githubusercontent.com/86445241/231886267-50940a10-0ec4-424c-b39e-7f0f63999aef.png)
 ---|---
-<br />
-Рисунок 1 - тренажёр AST: а - 3D-модель, б - схематичная визуализация результата расчёта.
+а). | б).  <br />
+
+Рисунок 1 - тренажёр AST: а - 3D-модель; б - схематичная визуализация результата расчёта.
 
  Проект содержит 3 ветви:
 1. main - реализация скрипта на python, возвращающего углы угловых актуаторов (редукторов) по заданным координатам и углам верхней платформы;

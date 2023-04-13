@@ -45,7 +45,8 @@ return arm_angle # Example: [-55.88 -54.72 -92.84 -54.10 -58.97 -50.18] пере
 
 ![Проверка угла 0](https://user-images.githubusercontent.com/86445241/231896653-c5e6d8c8-8337-4123-a9c6-0ce3dfde19ac.png)|![Изменение положения](https://user-images.githubusercontent.com/86445241/231896717-9eafa52d-ff11-416e-bddb-7d6951c053db.png)
 ---|---
-a).|б).<br />
+a).|б). <br />
+
 Рисунок 2 - схема тренажера: а - угол нулевого актуатора = 55.88 град; б - способ изменения параметров. 
 
 3. arms_degrees_with_angular_limit_on_joint_and_arm.py - исполнительный файл.

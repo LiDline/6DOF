@@ -4,7 +4,7 @@
 
 Данный проект создан для изучения возможностей [тренажёра](https://auto-sys.su/products/astm/) (зелёный), спроектированного на базе 6-ти степенной платформы Стюрта на угловых актуаторах.
 
-![312683cc-cc83-4923-8dc0-b2953b33f5bf](https://user-images.githubusercontent.com/86445241/231889383-e6b47faa-abeb-47a2-adaa-bd8afbf7a92d.jpg)|![1  Graph, default position of platform](https://user-images.githubusercontent.com/86445241/231886267-50940a10-0ec4-424c-b39e-7f0f63999aef.png)
+![312683cc-cc83-4923-8dc0-b2953b33f5bf xuJY8](https://user-images.githubusercontent.com/86445241/231889548-04e3f301-250c-4bc7-ae76-372ac1f138c0.jpg)|![1  Graph, default position of platform](https://user-images.githubusercontent.com/86445241/231886267-50940a10-0ec4-424c-b39e-7f0f63999aef.png)
 ---|---
 а). | б).  <br />
 

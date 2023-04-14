@@ -27,4 +27,5 @@ def cross_normal_to_oz(matrix, R, r):   # https://hedgedoc.auto-sys.su/JAqGGd3JR
         elif t_1 > t_2:
             return  array([x_2, y_2, 0, t_2])
     else:
-        return 'Превышена длина ноги'        
+        print('Превышена длина ноги'  )
+        return array([None, None, 0, None])       

@@ -1,5 +1,7 @@
 from numpy import array, cos, sin, zeros, hstack, vstack
 
+
+# Реализация матрицы поворота по последовательности XYZ
 def rotation_matrix(alpha, beta, gamma):
     
     Rx_matrix = array([[1, 0,  0],

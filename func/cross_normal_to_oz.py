@@ -1,6 +1,8 @@
 from numpy import array, sqrt
 from math import atan2
 
+
+# Точки пересечения между окружностью (редуктором) и сферой (тяга)
 def cross_normal_to_oz(matrix, R, r):   # https://hedgedoc.auto-sys.su/JAqGGd3JRn-qmUJVMdjODg
 
     X = matrix[0][0] # Нахожу смещение между координатами окружности и проекции сферы 

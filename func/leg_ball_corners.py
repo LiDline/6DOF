@@ -79,7 +79,7 @@ def leg_ball_corners(matrix_move_lower_plate, upper_points, matrix_move_upper_pl
             # Находим координаты нижней шаровой относительно верхней
             coordinates_crosspoints_from_upper_points[i] = linalg.inv(matrix_move_upper_plate[i]).dot(global_cross_coordinates[i])
 
-            # Найдём угол между проекцией тяги (на XY) и верхней точки, чтобы повернуть XY на полученный угол (тяга няходится в 1-ей четверти)
+            # Найдём угол между проекцией тяги (на XY локальной) и верхней точки, чтобы повернуть локальную СК на полученный угол (тяга няходится в 1-ей четверти)
             angles_between_crosspoints_and_upper_points[i] = atan2(coordinates_upper_points_from_crosspoints[i][1][0], coordinates_upper_points_from_crosspoints[i][0][0])
             # Для верхней точки плиты тяга няходится в 3-ей четверти, поэтому ближе повернуть плоскость YZ, а не XZ
             angles_between_upper_points_and_crosspoints[i] = atan2(coordinates_crosspoints_from_upper_points[i][0][0], coordinates_crosspoints_from_upper_points[i][1][0])

@@ -3,6 +3,10 @@ from math import atan2
 
 
 from func.rotation_matrix import rotation_matrix
+import constants
+
+
+moving_gas_spring = constants.MOVING_GAS_SPRING
 
 
 # Расчёт нижнего шарнира пружины
@@ -21,7 +25,7 @@ len_spring = zeros(3)
 
 
 # Нахождение углов шаровых наконечников для пружин
-def spring_ball_corners(upper_points, lower_points, matrix_move_lower_plate, matrix_move_upper_plate, angle_lower_joint, angle_upper_joint, moving_gas_spring):
+def spring_ball_corners(upper_points, lower_points, matrix_move_lower_plate, matrix_move_upper_plate, angle_lower_joint, angle_upper_joint):
     """5. Поиск углов шаровых наконечников пружин"""
 
     for i in range(3):

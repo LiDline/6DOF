@@ -3,6 +3,14 @@ from numpy import radians, zeros
 
 from func.transition_matrix import transition_matrix
 from func.rotation_matrix import rotation_matrix
+import constants
+
+
+offset_lower = constants.OFFSET_LOWER
+rotate_local_cs = constants.ROTATE_LOCAL_CS
+local_lower_CS = constants.LOCAL_LOWER_CS
+offset_upper = constants.OFFSET_UPPER
+local_upper_CS = constants.LOCAL_UPPER_CS
 
 
 # Матрица переноса нижней плиты
@@ -16,7 +24,7 @@ upper_points = zeros((9,4,1))
 
 
 # Создание матриц с координатами точек верхней и нижней плиты
-def plate_coordinates(move_upper_CS, offset_lower, rotate_local_cs, local_lower_CS, offset_upper, local_upper_CS):
+def plate_coordinates(move_upper_CS):
 
     """"3. Координаты плит"""
 

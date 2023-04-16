@@ -4,14 +4,10 @@ from numpy import array, pi
 from func.plate_coordinates import plate_coordinates
 from func.leg_ball_corners import leg_ball_corners
 from func.spring_ball_corners import spring_ball_corners
-from constants import constants
+import constants
 
 
-# Константы
-max_angle_spherical_joint, border_of_arm_angle, R, r, moving_gas_spring, offset_lower, offset_upper, rotate_local_cs, local_lower_CS, local_upper_CS = constants()
-
-#_____________________________________________________________________________________________________________________________________________________________
-
+max_angle_spherical_joint = constants.MAX_ANGLE_SPHERICAL_JOINT
 
 def solve(x, y, z, alpha, beta, gamma):
 
@@ -19,14 +15,14 @@ def solve(x, y, z, alpha, beta, gamma):
 
     """"2. Координаты плит"""
 
-    matrix_move_lower_plate, matrix_move_upper_plate, lower_points, upper_points = plate_coordinates(move_upper_CS, offset_lower, rotate_local_cs, local_lower_CS, offset_upper, local_upper_CS)
+    matrix_move_lower_plate, matrix_move_upper_plate, lower_points, upper_points = plate_coordinates(move_upper_CS)
   
     """3. Точки пересечения"""
-    arm_angle, angle_lower_joint, angle_upper_joint = leg_ball_corners(matrix_move_lower_plate, upper_points, matrix_move_upper_plate, border_of_arm_angle, R, r)
+    arm_angle, angle_lower_joint, angle_upper_joint = leg_ball_corners(matrix_move_lower_plate, upper_points, matrix_move_upper_plate)
 
     """4. Поиск углов шаровых наконечников пружин"""
 
-    angle_lower_joint, angle_upper_joint = spring_ball_corners(upper_points, lower_points, matrix_move_lower_plate, matrix_move_upper_plate, angle_lower_joint, angle_upper_joint, moving_gas_spring)
+    angle_lower_joint, angle_upper_joint = spring_ball_corners(upper_points, lower_points, matrix_move_lower_plate, matrix_move_upper_plate, angle_lower_joint, angle_upper_joint)
 
     """5. Проверка углов шаровых опор"""
     

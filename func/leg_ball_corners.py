@@ -6,6 +6,12 @@ from func.cross_normal_to_oz import cross_normal_to_oz
 from func.matrix_1_4 import matrix_1_4
 from func.transition_matrix import transition_matrix
 from func.rotation_matrix import rotation_matrix
+import constants
+
+
+border_of_arm_angle = constants.BORDER_OF_ARM_ANGLE
+R = constants.R_CIRCLE
+r = constants.R_SPHERE
 
 
 # Координаты верхний точек относительно нижних
@@ -42,7 +48,7 @@ angle_upper_joint = zeros(9)
 
 
 # Нахождение углов шаровых наконечников для ног
-def leg_ball_corners(matrix_move_lower_plate, upper_points, matrix_move_upper_plate, border_of_arm_angle, R, r):
+def leg_ball_corners(matrix_move_lower_plate, upper_points, matrix_move_upper_plate):
     for i in range(6):
 
             """4.1 Точки пересечения"""

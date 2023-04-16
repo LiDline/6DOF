@@ -1,4 +1,4 @@
-from numpy import  zeros, linalg, pi
+from numpy import  zeros, linalg, pi, nan, array
 from math import atan2
 
 
@@ -62,7 +62,8 @@ def leg_ball_corners(matrix_move_lower_plate, upper_points, matrix_move_upper_pl
                 arm_angle[i] = cross_matrix[3]
             else:
                 print(f'Угол рычага {i+1} = {cross_matrix[3]*180/pi} => не входит в допустимый диапазон')
-                return False
+                return array((nan, nan, nan, nan, nan, nan)), array((nan, nan, nan, nan, nan, nan, nan, nan, nan)), array((nan, nan, nan, nan, nan, nan, nan, nan, nan))
+            
             # Эти локальные координаты являются частью объекта, который мы и переносим
             global_cross_coordinates[i] =  matrix_move_lower_plate[i].dot(local_cross_coordinates[i])
     #_____________________________________________________________________________________________________________________________________________________________

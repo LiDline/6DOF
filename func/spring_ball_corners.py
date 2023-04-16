@@ -1,4 +1,4 @@
-from numpy import  zeros, linalg, sqrt
+from numpy import  zeros, linalg, sqrt, array, nan
 from math import atan2
 
 
@@ -63,9 +63,9 @@ def spring_ball_corners(upper_points, lower_points, matrix_move_lower_plate, mat
         # Если длина пружины <> её max/min - отметаем решение
         if len_spring[i] >= moving_gas_spring[1]:
             print('Длина пружины больше допустимой max')
-            return False
+            return array((nan, nan, nan, nan, nan, nan, nan, nan, nan)), array((nan, nan, nan, nan, nan, nan, nan, nan, nan))
         elif len_spring[i] <= moving_gas_spring[0]:
             print('Длина пружины меньше допустимой min')
-            return False
+            return array((nan, nan, nan, nan, nan, nan, nan, nan, nan)), array((nan, nan, nan, nan, nan, nan, nan, nan, nan))
         
         return angle_lower_joint, angle_upper_joint

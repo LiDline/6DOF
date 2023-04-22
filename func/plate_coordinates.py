@@ -50,4 +50,4 @@ def plate_coordinates(move_upper_CS):
                                     matrix_rotate_local_cs))    
         upper_points[i] = matrix_move_upper_plate[i].dot(local_upper_CS) # Перемещение и поворот верхней плиты
 
-    return matrix_move_lower_plate, matrix_move_upper_plate, lower_points, upper_points
+    return matrix_move_lower_plate, matrix_move_upper_plate, lower_points, upper_points, matrix_move_upper_CS

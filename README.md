@@ -21,11 +21,7 @@
 python3 visualization.py
 ```
 
-<div>
-    <a href="https://plotly.com/~LiDline/1/?share_key=QhVbo2c6ecpZS2iOqOcLGi" target="_blank" title="test" style="display: block; text-align: center;"><img src="https://plotly.com/~LiDline/1.png?share_key=QhVbo2c6ecpZS2iOqOcLGi" alt="test" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-    <script data-plotly="LiDline:1" sharekey-plotly="QhVbo2c6ecpZS2iOqOcLGi" src="https://plotly.com/embed.js" async></script>
-</div>
-
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plotly.com/~LiDline/1.embed"></iframe>
 
 
 ## 3 Состав ветки visualization

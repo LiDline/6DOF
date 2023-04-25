@@ -20,7 +20,9 @@
 ```python
 python3 visualization.py
 ```
-![image](https://user-images.githubusercontent.com/86445241/233808379-edeab629-b57e-4ca0-9a9d-7467b9126625.png)
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~LiDline/1.embed"></iframe>
+
 
 ## 3 Состав ветки visualization
 Ветка visualization является продолжением ветки main (т.е. файлы ветки изменены для дополнения return).

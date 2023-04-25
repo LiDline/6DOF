@@ -1,6 +1,7 @@
 from func.Graph import Graph
 from main import solve
 import plotly.graph_objects as go
+import plotly.io as pio
 
 
 # return с main.py немного вырос
@@ -42,4 +43,5 @@ for i in range(3):
 graph.title()
 graph.decor()
 
-fig.show()
+
+pio.write_html(fig, file='figure.html', auto_open=True)

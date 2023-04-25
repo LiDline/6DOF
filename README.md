@@ -71,7 +71,7 @@ a).|б). <br />
 ### 7.1 Определение угла редуктора
 
 Угол редуктора вычисляем относительно OY (рисунок 3, б). Важно отметить, что **в SW отрицательных углов нет**, в скрипте угол вычисляется через atan2: в I четверти знак положительный, во второй => отрицательный. Мы выбираем НАИМЕНЬШИЙ угол, который вписывается в диапазон max/min углов редукторов = [-112.38, 52.62] град (это конструкционные ограничения). <br />
-См. подробный разбор нахождения углов [тут](https://hedgedoc.auto-sys.su/JAqGGd3JRn-qmUJVMdjODg) или [тут] в файле (https://github.com/LiDline/6DOF/tree/test) "**2. Sphere&circle.ipynb**".
+См. подробный разбор нахождения углов [тут](https://hedgedoc.auto-sys.su/JAqGGd3JRn-qmUJVMdjODg) или [тут](https://github.com/LiDline/6DOF/tree/test) в файле "**2. Sphere&circle.ipynb**".
 
 ![1](https://user-images.githubusercontent.com/86445241/232336460-858e7131-d233-469b-af6a-b62f14796a9e.png)|![2](https://user-images.githubusercontent.com/86445241/232336490-214af603-e1a8-474a-a9f0-af731c765a3b.png)
 ---|---

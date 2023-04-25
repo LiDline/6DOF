@@ -23,8 +23,6 @@ python3 visualization.py
 
 Предварительный просмотр [тут](https://chart-studio.plotly.com/~LiDline/1.embed).
 
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://chart-studio.plotly.com/~LiDline/1.embed" height="525" width="100%"></iframe>
-
 ## 3 Состав ветки visualization
 Ветка visualization является продолжением ветки main (т.е. файлы ветки изменены для дополнения return).
 1. папка func - содержит в себе необходимые функции для математического расчёта платформы. Состав дополнен следующими файлами:

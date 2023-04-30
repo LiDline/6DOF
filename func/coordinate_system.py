@@ -1,4 +1,4 @@
-from numpy import array, zeros
+from numpy import zeros
 
 
 from func.matrix_1_4 import matrix_1_4

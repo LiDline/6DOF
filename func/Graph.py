@@ -7,18 +7,20 @@ from func.added_first_number import a_f_n
 
 
 class Graph():
-    def __init__(self, fig, lower_points, upper_points, degrees_cross_matrix, global_cross_coordinates,
-                 angle_joint_lower, angle_joint_upper, move_upper_CS):
+    def __init__(self, fig, lower_points, upper_points, move_upper_CS,
+                #  degrees_cross_matrix, global_cross_coordinates,
+                #  angle_joint_lower, angle_joint_upper, 
+                 ):
         self.fig = fig
         self.color = ['black', 'purple', 'brown', 'green', 'orange', 'wheat']
         self.lower_points = lower_points
         self.upper_points = upper_points
-        self.degrees_cross_matrix = degrees_cross_matrix
-        self.global_cross_coordinates = global_cross_coordinates
-        self.angle_joint_lower = angle_joint_lower
-        self.angle_joint_upper = angle_joint_upper
-        self.angle_lower_joint_of_gas_spring = angle_joint_lower[6:]
-        self.angle_upper_joint_of_gas_spring = angle_joint_upper[6:]
+        # self.degrees_cross_matrix = degrees_cross_matrix
+        # self.global_cross_coordinates = global_cross_coordinates
+        # self.angle_joint_lower = angle_joint_lower
+        # self.angle_joint_upper = angle_joint_upper
+        # self.angle_lower_joint_of_gas_spring = angle_joint_lower[6:]
+        # self.angle_upper_joint_of_gas_spring = angle_joint_upper[6:]
         self.move_upper_CS = move_upper_CS
 
     #  Отрисовка тяг и рычагов

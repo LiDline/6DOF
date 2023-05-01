@@ -8,34 +8,26 @@ from func.added_first_number import a_f_n
 
 class Graph():
     def __init__(self, fig, lower_points, upper_points, move_upper_CS,
-                #  degrees_cross_matrix, global_cross_coordinates,
-                #  angle_joint_lower, angle_joint_upper, 
                  ):
         self.fig = fig
         self.color = ['black', 'purple', 'brown', 'green', 'orange', 'wheat']
         self.lower_points = lower_points
         self.upper_points = upper_points
-        # self.degrees_cross_matrix = degrees_cross_matrix
-        # self.global_cross_coordinates = global_cross_coordinates
-        # self.angle_joint_lower = angle_joint_lower
-        # self.angle_joint_upper = angle_joint_upper
-        # self.angle_lower_joint_of_gas_spring = angle_joint_lower[6:]
-        # self.angle_upper_joint_of_gas_spring = angle_joint_upper[6:]
         self.move_upper_CS = move_upper_CS
 
     #  Отрисовка тяг и рычагов
-    def legs(self, i, group):
-        self.fig.add_trace(go.Scatter3d(x=[a_f_n(self.lower_points, 0)[i], a_f_n(self.global_cross_coordinates, 0)[i]],
+    def legs(self, i, group, arm_angle, global_cross_coordinates):
+        self.fig.add_trace(go.Scatter3d(x=[a_f_n(self.lower_points, 0)[i], a_f_n(global_cross_coordinates, 0)[i]],
                                         y=[a_f_n(self.lower_points, 1)[i], a_f_n(
-                                            self.global_cross_coordinates, 1)[i]],
+                                            global_cross_coordinates, 1)[i]],
                                         z=[a_f_n(self.lower_points, 2)[i], a_f_n(
-                                            self.global_cross_coordinates, 2)[i]],
-                                        showlegend=True, name=f'Рычаг ({round(self.degrees_cross_matrix[i]*180/pi, 2)}) - Тяга {i+1} ({round(self.angle_joint_lower[i]*180/pi, 2)}; {round(self.angle_joint_upper[i]*180/pi, 2)})',
+                                            global_cross_coordinates, 2)[i]],
+                                        showlegend=True, name=f'Рычаг ({round(arm_angle[i]*180/pi, 2)})',
                                         opacity=1, legendgroup=group, marker=dict(size=5, color=self.color[i], colorscale='Viridis'), line=dict(width=2)))
-        self.fig.add_trace(go.Scatter3d(x=[a_f_n(self.global_cross_coordinates, 0)[i], a_f_n(self.upper_points, 0)[i]],
-                                        y=[a_f_n(self.global_cross_coordinates, 1)[
+        self.fig.add_trace(go.Scatter3d(x=[a_f_n(global_cross_coordinates, 0)[i], a_f_n(self.upper_points, 0)[i]],
+                                        y=[a_f_n(global_cross_coordinates, 1)[
                                             i], a_f_n(self.upper_points, 1)[i]],
-                                        z=[a_f_n(self.global_cross_coordinates, 2)[
+                                        z=[a_f_n(global_cross_coordinates, 2)[
                                             i], a_f_n(self.upper_points, 2)[i]],
                                         showlegend=False, opacity=1, legendgroup=group, marker=dict(size=5, color=self.color[i], colorscale='Viridis'), line=dict(width=2)))
 
@@ -85,15 +77,6 @@ class Graph():
         self.fig.add_trace(go.Scatter3d(x=a_f_n(self.lower_points[:6], 0), y=a_f_n(self.lower_points[:6], 1), z=a_f_n(self.lower_points[:6], 2),
                                         showlegend=False, surfaceaxis=-1, opacity=0.8, legendgroup="group8", marker=dict(size=1, color='black', colorscale='Viridis',)))
 
-    # Отрисовка пружин
-    def springs(self, i):
-        self.fig.add_trace(go.Scatter3d(x=[a_f_n(self.lower_points, 0)[i+6], a_f_n(self.upper_points, 0)[i+6]],
-                                        y=[a_f_n(self.lower_points, 1)[i+6],
-                                           a_f_n(self.upper_points, 1)[i+6]],
-                                        z=[a_f_n(self.lower_points, 2)[i+6],
-                                           a_f_n(self.upper_points, 2)[i+6]],
-                                        showlegend=True, name=f'Пружина {i+1} ({round(self.angle_lower_joint_of_gas_spring[i]*180/pi, 2)}; {round(self.angle_upper_joint_of_gas_spring[i]*180/pi, 2)})',
-                                        opacity=1, legendgroup=f'group{i+10}', marker=dict(size=5, color=self.color[i], colorscale='Viridis'), line=dict(width=5, dash='dot')))
 
     # локальная СК нижней плиты (верхняя отрисовывается от матрицы перемещений)
     def coordinate_system_lower_plate(self):

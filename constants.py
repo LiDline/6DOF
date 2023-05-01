@@ -1,4 +1,4 @@
-from numpy import array
+from numpy import array, float64
 
 
 from func.matrix_1_4 import matrix_1_4
@@ -30,10 +30,18 @@ OFFSET_UPPER = array(([-307,  -60, 0, 0, 0, 0],  # X, Y, Z, alpha, beta, gamma
                       [101.54,  295.87, 0, 0, 0, -120],
                       [-307,  60, 0, 0, 0, -180]))
 
-R_CIRCLE = 130    # Радиус окружности (рычага редуктора)
-R_SPHERE = 300   # Радиус сферы (тяги)
-
 GLOBAL_COORDINATE_SYSTEM = array([[80, 0, 0],  # OX
                                 [0, 80, 0],  # OY
                                 [0, 0, 80],  # OZ
                                 [0, 0, 0]])  # 0, 0
+
+R_CIRCLE = 130    # Радиус окружности (рычага редуктора)
+R_SPHERE = 300   # Радиус сферы (тяги)
+
+"""1. Конструкционные ограничения"""
+
+MAX_ANGLE_SPHERICAL_JOINT = 35  # max угол шаровых
+# Знаки соотвтествуют локальным СК
+BORDER_OF_ARM_ANGLE = array((-112.38, 52.62), dtype=float64)
+# min/max длина пружины (от шаровой до шаровой)
+MOVING_GAS_SPRING = array((464, 714), dtype=float64)

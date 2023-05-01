@@ -40,4 +40,4 @@ def solve(x, y, z, alpha, beta, gamma):
     global_coordinate_system_upper_plate, local_coordinate_system_lower_point, local_coordinate_system_crosspoints = coordinate_system(
         matrix_move_lower_plate, matrix_move_upper_CS, local_cross_coordinates, constants.GLOBAL_COORDINATE_SYSTEM)
 
-    return move_upper_CS, lower_points, upper_points, arm_angle, global_cross_coordinates, angle_lower_joint, angle_upper_joint, matrix_move_lower_plate, matrix_move_upper_CS, local_cross_coordinates, global_coordinate_system_upper_plate, local_coordinate_system_lower_point, local_coordinate_system_crosspoints, local_coordinate_system_cs_lower_joint_of_gas_spring, local_coordinate_system_cs_upper_joint_of_gas_spring, local_coordinate_system_upper_point, local_coordinate_system_crosspoints_after_rotate
+    return move_upper_CS, lower_points, upper_points, arm_angle, global_cross_coordinates
